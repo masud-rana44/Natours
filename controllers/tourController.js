@@ -31,7 +31,50 @@ const Tour = require('../models/tourModels');
 
 exports.getTours = async (req, res) => {
   try {
-    const tours = await Tour.find();
+    console.log(req.query);
+
+    // BUILD QUERY
+    //  1A) Filtering
+    const queryObj = { ...req.query };
+    const excludeFilds = ['sort', 'limit', 'page', 'filds'];
+    excludeFilds.forEach((el) => delete queryObj[el]);
+
+    // 1B) Advance filtering
+    let queryStr = JSON.stringify(queryObj);
+    queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
+
+    let query = Tour.find(JSON.parse(queryStr));
+
+    // 2) Sorting
+    if (req.query.sort) {
+      // sort('price ratingsAverage')
+      const sortBy = req.query.sort.split(',').join(' ');
+      query = query.sort(sortBy);
+    } else {
+      query = query.sort('-createdAt');
+    }
+
+    // 3) Field limiting
+    if (req.query.fields) {
+      // select('name duration difficulty')
+      const fields = req.query.fields.split(',').join(' ');
+      query = query.select(fields);
+    } else {
+      query = query.select('-__v');
+    }
+
+    // EXECUTE QUERY
+    const tours = await query;
+
+    // const query = Tour.find()
+    //   .where('difficulty')
+    //   .equals('easy')
+    //   .where('duration')
+    //   .equals(5);
+
+    // Tour.find({ difficulty: 'easy', duration: { $gte: 5 }})
+
+    // SEND RESPONSE
     res.status(200).json({
       status: 'success',
       results: tours.length,
