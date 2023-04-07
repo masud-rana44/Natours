@@ -12,7 +12,7 @@ class APIFeatures {
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
 
-    this.query.find(JSON.parse(queryStr));
+    this.query = this.query.find(JSON.parse(queryStr));
 
     return this;
   }
@@ -20,9 +20,9 @@ class APIFeatures {
   sort() {
     if (this.queryString.sort) {
       const sortBy = this.queryString.sort.split(',').join(' ');
-      this.query.sort(sortBy);
+      this.query = this.query.sort(sortBy);
     } else {
-      this.query.sort('id');
+      this.query = this.query.sort('id');
     }
 
     return this;
@@ -31,9 +31,9 @@ class APIFeatures {
   limitFields() {
     if (this.queryString.fields) {
       const fields = this.queryString.fields.split(',').join(' ');
-      this.query.select(fields);
+      this.query = this.query.select(fields);
     } else {
-      this.query.select('-__v');
+      this.query = this.query.select('-__v');
     }
 
     return this;
@@ -44,7 +44,7 @@ class APIFeatures {
     const limit = this.queryString.limit * 1 || 100;
     const skip = (page - 1) * limit;
 
-    this.query.skip(skip).limit(limit);
+    this.query = this.query.skip(skip).limit(limit);
 
     return this;
   }
