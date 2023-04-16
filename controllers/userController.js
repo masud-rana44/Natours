@@ -34,10 +34,9 @@ exports.updateMe = catchAsync(async (req, res, next) => {
 
   // 2) Filtered out unwanted fields that are not allowed to be updated
   const filteredBody = filterObj(req.body, 'name', 'email');
-  console.log(filteredBody);
 
   // 3) Update user document
-  const updateUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
+  const updateUser = await User.findByIdAndUpdate(req.user._id, filteredBody, {
     new: true,
     runValidators: true,
   });
@@ -47,6 +46,15 @@ exports.updateMe = catchAsync(async (req, res, next) => {
     data: {
       user: updateUser,
     },
+  });
+});
+
+exports.deleteMe = catchAsync(async (req, res, next) => {
+  await User.findOneAndUpdate(req.user.id, { active: false });
+
+  res.status(204).json({
+    status: 'success',
+    data: null,
   });
 });
 
