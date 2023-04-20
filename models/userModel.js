@@ -53,6 +53,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
+// Middlewares
 userSchema.pre('save', async function (next) {
   // Only this function if password was actually modified
   if (!this.isModified('password')) return next();
@@ -77,6 +78,7 @@ userSchema.pre(/^find/, function (next) {
   next();
 });
 
+// Instance methods
 userSchema.methods.correctPassword = async function (
   candidatePassword,
   userPassword

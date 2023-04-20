@@ -85,6 +85,7 @@ exports.deleteTour = catchAsync(async (req, res, next) => {
   });
 });
 
+// Aggragation pipeline
 exports.getTourStats = catchAsync(async (req, res, next) => {
   const stats = await Tour.aggregate([
     {

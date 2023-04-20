@@ -24,7 +24,7 @@ const createSendToken = (user, statusCode, res) => {
 
   res.cookie('jwt', token, cookieOptions);
 
-  // Remove password form output
+  // Remove password, active fields form output
   user.password = undefined;
   user.active = undefined;
 
@@ -87,7 +87,7 @@ exports.protect = catchAsync(async (req, res, next) => {
   const currentUser = await User.findById(decoded.id);
   if (!currentUser)
     return next(
-      new AppError('The user beloging to this toke does no longer exists')
+      new AppError('The user beloging to this token does no longer exists')
     );
 
   // 4) Check if user changed password after the token was issued
@@ -122,8 +122,7 @@ exports.restrictTo =
 exports.forgotPassword = catchAsync(async (req, res, next) => {
   // 1) Get user based on the POSTed email
   const user = await User.findOne({ email: req.body.email });
-  if (!user)
-    return next(new AppError('There is no email address with this emial', 404));
+  if (!user) return next(new AppError('There is no user with this email', 404));
 
   // 2) Generate the rendom reset token
   const resetToken = user.createPasswordResetToken();

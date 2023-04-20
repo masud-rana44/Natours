@@ -34,7 +34,7 @@ app.use(express.json({ limit: '10kb' }));
 // Data sanitaization: against NOSQL query injection
 app.use(mongoSanitize());
 
-// Data sanitaization: against XSS (Cross size scripting)
+// Data sanitaization: against XSS (Cross site scripting)
 app.use(xss());
 
 // Prevent perameter polution
