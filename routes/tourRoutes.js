@@ -14,7 +14,9 @@ router.use('/:tourId/reviews', reviewRouter);
 router
   .route('/top-5-cheap')
   .get(tourController.topToursAlieas, tourController.getTours);
+
 router.route('/tour-stats').get(tourController.getTourStats);
+
 router
   .route('/monthly-plan/:year')
   .get(
@@ -22,6 +24,14 @@ router
     authController.restrictTo('admin', 'lead-guide', 'guide'),
     tourController.getMonthlyPlan
   );
+
+router
+  .route('/tours-within/:distance/center/:latlng/unit/:unit')
+  .get(tourController.getToursWithin);
+// /tours-within/250/center/-40.321,47.13131/unit/mi
+// /tours-wintin?distance=250&center=-40.321,47.13131&unit=mi
+
+router.route('/distances/:latlng/unit/:unit').get(tourController.getDistances);
 
 router
   .route('/')
