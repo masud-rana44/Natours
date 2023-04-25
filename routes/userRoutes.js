@@ -1,8 +1,17 @@
 const express = require('express');
+// const rateLimit = require('express-rate-limit');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 
 const router = express.Router();
+
+// Limited fail login request
+// const limiter = rateLimit({
+//   max: 5,
+//   windowMs: 3 * 24 * 60 * 60 * 1000,
+//   message: 'Your maximum login attemps exceeds, Try after 3 days.',
+// });
+// router.use('/login', limiter);
 
 router.post('/signup', authController.signup);
 router.post('/login', authController.login);
