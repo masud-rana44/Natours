@@ -29,8 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
 
 // Development loggin
-// if (process.env.NODE_ENV === 'development') console.log(true);
-app.use(morgan('dev'));
+if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 
 // Limit request from same IP
 const limiter = rateLimit({
@@ -42,6 +41,7 @@ app.use('/api', limiter);
 
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
+app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(cookieParser());
 
 // Data sanitaization: against NOSQL query injection
