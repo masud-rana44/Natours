@@ -12111,7 +12111,13 @@ var logout = /*#__PURE__*/function () {
           });
         case 3:
           res = _context2.sent;
-          if (res.data.status === 'success') location.reload(true);
+          if (res.data.status === 'success') {
+            // location.reload(true);
+            (0, _alerts.showAlert)('success', 'Logout successfully!');
+            window.setTimeout(function () {
+              location.assign('/');
+            }, 500);
+          }
           _context2.next = 10;
           break;
         case 7:
@@ -12159,7 +12165,7 @@ var updateSettings = /*#__PURE__*/function () {
           });
         case 4:
           res = _context.sent;
-          if (res.status === 'success') {
+          if (res.data.status === 'success') {
             (0, _alerts.showAlert)('success', "".concat(type.toUpperCase(), " updated successfully!"));
           }
           _context.next = 11;
@@ -12338,14 +12344,14 @@ if (loginForm) loginForm.addEventListener('submit', function (e) {
 if (logOutBtn) logOutBtn.addEventListener('click', _login.logout);
 if (userDataForm) userDataForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
-  console.log(name, email);
-  (0, _updateSettings.updateSettings)('data', {
-    name: name,
-    email: email
-  });
+  var form = new FormData();
+  form.append('name', document.getElementById('name').value);
+  form.append('email', document.getElementById('email').value);
+  form.append('photo', document.getElementById('photo').files[0]);
+  (0, _updateSettings.updateSettings)('data', form);
 });
+
+// Don't work, maybe database validation issue arise
 if (userPasswordForm) userPasswordForm.addEventListener('submit', function (e) {
   e.preventDefault();
   document.querySelector('.btn--save-password').innerContent = 'Updateing';
@@ -12387,7 +12393,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "11789" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1366" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

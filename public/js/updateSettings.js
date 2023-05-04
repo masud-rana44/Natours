@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 import axios from 'axios';
 import { showAlert } from './alerts';
 
@@ -16,7 +15,7 @@ export const updateSettings = async function (type, data) {
       data,
     });
 
-    if (res.status === 'success') {
+    if (res.data.status === 'success') {
       showAlert('success', `${type.toUpperCase()} updated successfully!`);
     }
   } catch (err) {

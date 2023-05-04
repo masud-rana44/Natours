@@ -66,7 +66,7 @@ app.use(
 // Test middleware
 app.use((req, res, next) => {
   req.createdAt = new Date().toISOString();
-  console.log(req.cookies);
+  // console.log(req.cookies);
   next();
 });
 
