@@ -12208,28 +12208,26 @@ var bookTour = /*#__PURE__*/function () {
         case 0:
           _context.prev = 0;
           _context.next = 3;
-          return (0, _axios.default)("http://localhost:8000/api/v1/bookings/checkout-session/".concat(tourId), {
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: "Bearer sk_test_51N4PGDC0f6I53doGWxRBjCEiO4j4koR7SshLktc7mlK3gyZv0LeRy9Y7yEQAyWDzWGcKLYOZBO1YanfxQoFshLdv00qGmgFnh3"
-            }
-          });
+          return (0, _axios.default)("http://localhost:8000/api/v1/bookings/checkout-session/".concat(tourId));
         case 3:
           session = _context.sent;
-          console.log(session);
-
-          // 2) Create checkout from + charge credit card
-          _context.next = 10;
+          _context.next = 6;
+          return stripe.redirectToCheckout({
+            sessionId: session.data.session.id
+          });
+        case 6:
+          _context.next = 12;
           break;
-        case 7:
-          _context.prev = 7;
+        case 8:
+          _context.prev = 8;
           _context.t0 = _context["catch"](0);
+          console.log(_context.t0);
           (0, _alerts.showAlert)('error', _context.t0);
-        case 10:
+        case 12:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[0, 7]]);
+    }, _callee, null, [[0, 8]]);
   }));
   return function bookTour(_x) {
     return _ref.apply(this, arguments);
