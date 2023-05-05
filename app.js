@@ -7,7 +7,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -19,7 +19,7 @@ const bookingRouter = require('./routes/bookingRoutes');
 
 const app = express();
 
-dotenv.config({ path: './config.env' });
+// dotenv.config({ path: './config.env' });
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
@@ -79,7 +79,7 @@ app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
-app.use('/api/v1/booking', bookingRouter);
+app.use('/api/v1/bookings', bookingRouter);
 
 app.all('*', (req, res, next) => {
   // res.status(404).json({
