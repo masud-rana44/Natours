@@ -11,6 +11,7 @@ exports.getOverview = catchAsync(async (req, res, next) => {
   // 2) Build template and render the template useing that data
   res.status(200).render('overview', {
     title: 'All Tours',
+    name: 'overview',
     tours,
   });
 });

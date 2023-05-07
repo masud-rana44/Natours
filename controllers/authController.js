@@ -118,7 +118,7 @@ exports.protect = catchAsync(async (req, res, next) => {
   next();
 });
 
-// Only check for logged in, no error occur
+// Only for rendered pages, no errors!
 exports.isLoggedIn = catchAsync(async (req, res, next) => {
   if (req.cookies.jwt) {
     try {
@@ -133,7 +133,13 @@ exports.isLoggedIn = catchAsync(async (req, res, next) => {
       if (!currentUser) return next();
 
       // 3) Check if user changed password after the token was issued
-      if (currentUser.changedPasswordAfter(decoded.iat)) return next();
+      // if (currentUser.changedPasswordAfter(decoded.iat))
+      //   return next(
+      //     new AppError(
+      //       'User recently changed password! Please log in again.',
+      //       401
+      //     )
+      //   );
 
       // THERE IS A LOGGED IN USER
       res.locals.user = currentUser;
@@ -233,7 +239,7 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
     return next(new AppError('Your current password is wrong!', 401));
 
   // 3) If so, update password
-  user.password = req.body.Password;
+  user.password = req.body.password;
   user.passwordConfirm = req.body.passwordConfirm;
   await user.save();
 

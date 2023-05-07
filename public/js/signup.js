@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { showAlert } from './alerts';
 
-export const singup = async (data) => {
+export const signup = async (data) => {
   try {
     const res = await axios({
       method: 'POST',
@@ -10,11 +10,11 @@ export const singup = async (data) => {
       data,
     });
 
-    if (res.status === 'success') {
+    if (res.data.status === 'success') {
       showAlert('success', 'Account create successfully!');
       window.setTimeout(() => {
         location.assign('/');
-      }, 15000);
+      }, 1500);
     }
   } catch (err) {
     console.log(err);

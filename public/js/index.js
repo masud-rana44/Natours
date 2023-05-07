@@ -2,10 +2,9 @@
 import '@babel/polyfill';
 import { displayMap } from './mapbox';
 import { login, logout } from './login';
-import { singup } from './signup';
+import { signup } from './signup';
 import { updateSettings } from './updateSettings';
 import { bookTour } from './stripe';
-import { signup } from '../../controllers/authController';
 
 // DOM ELEMENT
 const mapbox = document.getElementById('map');
