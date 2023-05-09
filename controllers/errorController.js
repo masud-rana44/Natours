@@ -18,6 +18,7 @@ const handleDuplicateFields = function (err) {
 };
 
 const sendErrorDev = function (err, req, res) {
+  console.log(err);
   // A) API
   if (req.originalUrl.startsWith('/api')) {
     return res.status(err.statusCode).json({
