@@ -5701,7 +5701,7 @@ var sendEmail = /*#__PURE__*/function () {
             (0, _alerts.showAlert)('success', 'Email send successfully!');
             window.setTimeout(function () {
               location.assign('/emailConfirmation');
-            }, 1500);
+            }, 500);
           }
           _context.next = 11;
           break;

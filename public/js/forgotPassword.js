@@ -14,7 +14,7 @@ export const sendEmail = async function (email) {
       showAlert('success', 'Email send successfully!');
       window.setTimeout(() => {
         location.assign('/emailConfirmation');
-      }, 1500);
+      }, 500);
     }
   } catch (err) {
     console.log(err);

@@ -62,7 +62,10 @@ exports.getEmailConfirmation = (req, res) => {
   res.status(200).render('confirmMsg', {
     title: 'Check your email',
     heading: 'Check Your Email',
-    msg: 'We sent a varification link to, check your email',
+    msg: 'We sent a varification link to your email.',
+    msg2: 'Check your email & click the reset password link to continue reseting your password.',
+    buttonLevel: 'Wrong email address?',
+    buttonText: 'Back to login',
   });
 };
 
