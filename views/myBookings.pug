@@ -1,0 +1,24 @@
+extends base
+block append head
+
+block content
+  main.main
+    div.card-container.card-container--booking
+
+      each book in bookings
+        div.card--booking
+          div.card__header--booking= book.tour.name
+          - const month = book.createdAt.toLocaleString('default', { month: 'long' }).toLowerCase();
+          - const date = book.createdAt.getDate();
+          - const year = book.createdAt.getFullYear().toString().slice(-2);
+          - const time = book.createdAt.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+          span.date--booking= `${time[0].padStart(2, '0')}:${time[1].padStart(2, '0')}, ${date} ${month} ${year}`
+          a.review-btn(href="#") review
+          if book.paid === true
+            a.paid-btn(href="#") paid
+          else
+            a.paid-btn(href="#") unpaid
+          span.price--booking= `$${book.price}`
+
+  
+    

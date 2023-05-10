@@ -1203,6 +1203,70 @@ body {
   align-self: center;
 }
 
+.card-container--booking {
+  /* max-width: 4000rem; */
+  display: block;
+  margin-top: -3rem;
+}
+
+.card--booking {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 2rem;
+  background-image: linear-gradient(to right, #7dd56f, #28b487);
+  padding: 0.5rem 4rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.card__header--booking {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #f1f1f1;
+}
+
+.price--booking {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #f1f1f1;
+}
+
+.date--booking {
+  color: #e0e0e0;
+  margin-left: -38rem;
+  font-size: 1.6rem;
+}
+
+.review-btn:link,
+.review-btn:visited,
+.paid-btn:link,
+.paid-btn:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #999;
+  background: #e0e0e0;
+  padding: 0.1rem 1.2rem;
+  border-radius: 3rem;
+  margin-right: -35rem;
+  transition: color 0.2s ease;
+}
+
+.review-btn:link,
+.review-btn:visited {
+  margin-right: -40rem;
+}
+
+.review-btn:hover,
+.review-btn:active {
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
 .error {
   position: absolute;
   top: 35%;
@@ -1270,7 +1334,6 @@ body {
   margin-bottom: 2rem;
   color: #999;
 }
-
 .login-form {
   margin: 0 auto;
   max-width: 55rem;
