@@ -1221,6 +1221,45 @@ body {
   margin: 0 auto;
 }
 
+.confirmation {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 80rem;
+  text-align: center;
+}
+
+.confirmation__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.confirmation__emoji {
+  font-size: 3.75rem;
+  margin-left: 1rem;
+}
+.confirmation__msg {
+  font-size: 2.5rem;
+  font-weight: 700;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.heading-description {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: #999;
+}
+
 .login-form {
   margin: 0 auto;
   max-width: 55rem;
@@ -1264,6 +1303,22 @@ body {
 
 .form__group:not(:last-child) {
   margin-bottom: 2.5rem;
+}
+
+.form__group a:link,
+.form__group a:visited {
+  display: block;
+  text-decoration: none;
+  text-align: right;
+  margin-top: -1.5rem;
+  font-size: 1.6rem;
+  color: #20bf6b;
+  transition: color 0.2s ease;
+}
+
+.form__group a:hover,
+.form__group a:active {
+  color: #7dd56f;
 }
 
 .form__label {

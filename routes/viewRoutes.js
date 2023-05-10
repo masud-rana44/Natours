@@ -15,6 +15,25 @@ router.get(
 router.get('/tour/:slug', authController.isLoggedIn, viewsController.getTour);
 router.get('/login', authController.isLoggedIn, viewsController.getLoginForm);
 router.get('/signup', authController.isLoggedIn, viewsController.getSignupForm);
+
+router.get(
+  '/forgotPassword',
+  authController.isLoggedIn,
+  viewsController.getForgotPasswordForm
+);
+
+router.get(
+  '/api/v1/users/resetPassword/:token',
+  authController.isLoggedIn,
+  viewsController.getResetPasswordForm
+);
+
+router.get(
+  '/emailConfirmation',
+  authController.isLoggedIn,
+  viewsController.getEmailConfirmation
+);
+
 router.get('/me', authController.protect, viewsController.getAccount);
 router.get('/my-tours', authController.protect, viewsController.getMyTours);
 

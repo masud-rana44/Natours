@@ -46,6 +46,26 @@ exports.getSignupForm = (req, res) => {
   });
 };
 
+exports.getForgotPasswordForm = (req, res) => {
+  res.status(200).render('forgotPassword', {
+    title: 'Forgot your password',
+  });
+};
+
+exports.getResetPasswordForm = (req, res) => {
+  res.status(200).render('resetPassword', {
+    title: 'Reset your password',
+  });
+};
+
+exports.getEmailConfirmation = (req, res) => {
+  res.status(200).render('confirmMsg', {
+    title: 'Check your email',
+    heading: 'Check Your Email',
+    msg: 'We sent a varification link to, check your email',
+  });
+};
+
 exports.getAccount = (req, res) => {
   res.status(200).render('account', {
     title: 'Your account',
