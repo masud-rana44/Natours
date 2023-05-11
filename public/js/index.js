@@ -5,18 +5,22 @@ import { signup } from './signup';
 import { sendEmail } from './forgotPassword';
 import { resetPassword } from './resetPassword';
 import { updateSettings } from './updateSettings';
+import { reviewFormHandler } from './toggleReviewForm';
+import { createReview } from './createReview';
 import { bookTour } from './stripe';
 
 // DOM ELEMENT
 const mapbox = document.getElementById('map');
 const loginForm = document.querySelector('.form--login');
 const signupForm = document.querySelector('.form--signup');
+const reviewForm = document.querySelector('.review__form');
 const logOutBtn = document.querySelector('.nav__el--logout');
 const forgotPasswordForm = document.querySelector('.form--forgotPassword');
 const resetPasswordForm = document.querySelector('.form--resetPassword');
 const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-password');
 const bookBtn = document.getElementById('book-tour');
+const btnsReview = document.querySelectorAll('.review-btn');
 
 // DELEGATION
 if (mapbox) {
@@ -59,6 +63,16 @@ if (resetPasswordForm)
     resetPassword(token, password, passwordConfirm);
   });
 
+if (reviewForm)
+  reviewForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // const tourId = JSON.parse(reviewForm.dataset.tourId);
+    // console.log(tourId);
+    const rating = document.getElementById('rating').value;
+    const review = document.getElementById('review').value;
+    createReview({ rating, review });
+  });
+
 if (logOutBtn) logOutBtn.addEventListener('click', logout);
 
 if (userDataForm)
@@ -96,3 +110,5 @@ if (bookBtn)
     const { tourId } = e.target.dataset;
     bookTour(tourId);
   });
+
+if (btnsReview) reviewFormHandler();
