@@ -1,0 +1,37 @@
+extends base
+block append head
+
+block content
+  main.main
+    div.card-container.card-container--booking
+
+      if (!reviews.length)
+        p.empty__msg No reviews yet. Be the first to leave a review!
+      else
+        each review in reviews
+          div.review-card
+            div.review-card__header
+              h3.review-card__tour-name= `${review.tour.name}`
+              .reviews__rating.review-card__rating
+                each star in [1, 2, 3, 4, 5]
+                  svg.reviews__star(class=`reviews__star--${review.rating >= star? 'active' : 'inactive'}`)
+                    use(xlink:href='/img/icons.svg#icon-star')
+            p.review-card__text= `${review.review}`
+            div.review-card__footer
+              div
+                span.review-card__author Reviewed on
+                | 
+                - const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                - const month = monthNames[review.createdAt.getMonth()];
+                - const year = review.createdAt.getFullYear();
+                - const formattedDate = `${month} ${year}`;
+                span.review-card__date= `${formattedDate}`
+              div.btns__review
+                button.btn__review.btn__review--edit Edit
+                button.btn__review.btn__review--delete(data-review-id=`${review.id}`) Delete
+
+
+
+
+
+

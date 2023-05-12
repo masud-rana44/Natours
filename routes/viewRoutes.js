@@ -36,6 +36,7 @@ router.get(
 
 router.get('/me', authController.protect, viewsController.getAccount);
 router.get('/my-tours', authController.protect, viewsController.getMyTours);
+router.get('/my-reviews', authController.protect, viewsController.getMyReviews);
 
 router.patch(
   '/update-user-data',

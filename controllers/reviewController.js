@@ -11,22 +11,22 @@ exports.setTourUserIds = (req, res, next) => {
   next();
 };
 
-exports.isReviewAvailable = catchAsync(async (req, res, next) => {
-  const bookings = await Booking.find({
-    tour: req.body.tour,
-    user: req.body.user,
-  });
+// exports.isReviewAvailable = catchAsync(async (req, res, next) => {
+//   const bookings = await Booking.find({
+//     tour: req.body.tour,
+//     user: req.body.user,
+//   });
 
-  bookings.forEach(async (booking) => {
-    if (!booking.reviewed) {
-      booking.reviewed = true;
-      await booking.save();
-      return next();
-    }
-  });
+//   bookings.forEach(async (booking) => {
+//     if (!booking.reviewed) {
+//       booking.reviewed = true;
+//       await booking.save();
+//       return next();
+//     }
+//   });
 
-  return next(new AppError('No available review belonging to this tour!', 404));
-});
+//   return next(new AppError('No available review belonging to this tour!', 404));
+// });
 
 exports.getAllReviews = factory.getAll(Review);
 exports.getReview = factory.getOne(Review);

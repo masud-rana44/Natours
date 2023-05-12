@@ -18,9 +18,20 @@ const closeReviewForm = () => {
 };
 
 export const reviewFormHandler = () => {
-  btnsReview.forEach((btn) => btn.addEventListener('click', openReviewForm));
-  btnCloseReviewForm.addEventListener('click', closeReviewForm);
-  overlay.addEventListener('click', closeReviewForm);
+  if (btnsReview)
+    btnsReview.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        openReviewForm();
+        const tourId = btn.dataset.tourId;
+        const userId = btn.dataset.userId;
+
+        review.setAttribute('data-tour-id', tourId);
+        review.setAttribute('data-user-id', userId);
+      });
+    });
+  if (btnCloseReviewForm)
+    btnCloseReviewForm.addEventListener('click', closeReviewForm);
+  if (overlay) overlay.addEventListener('click', closeReviewForm);
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !review.classList.contains('hidden')) {

@@ -6,7 +6,7 @@ import { sendEmail } from './forgotPassword';
 import { resetPassword } from './resetPassword';
 import { updateSettings } from './updateSettings';
 import { reviewFormHandler } from './toggleReviewForm';
-import { createReview } from './createReview';
+import { createReview, deleteReview } from './createReview';
 import { bookTour } from './stripe';
 
 // DOM ELEMENT
@@ -21,6 +21,7 @@ const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-password');
 const bookBtn = document.getElementById('book-tour');
 const btnsReview = document.querySelectorAll('.review-btn');
+const btnsReviewDelete = document.querySelectorAll('.btn__review--delete');
 
 // DELEGATION
 if (mapbox) {
@@ -66,11 +67,9 @@ if (resetPasswordForm)
 if (reviewForm)
   reviewForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    // const tourId = JSON.parse(reviewForm.dataset.tourId);
-    // console.log(tourId);
     const rating = document.getElementById('rating').value;
     const review = document.getElementById('review').value;
-    createReview({ rating, review });
+    createReview(rating, review);
   });
 
 if (logOutBtn) logOutBtn.addEventListener('click', logout);
@@ -112,3 +111,11 @@ if (bookBtn)
   });
 
 if (btnsReview) reviewFormHandler();
+
+if (btnsReviewDelete)
+  btnsReviewDelete.forEach((btn) =>
+    btn.addEventListener('click', (e) => {
+      const reviewId = e.target.dataset.reviewId;
+      deleteReview(reviewId, e);
+    })
+  );

@@ -1292,9 +1292,11 @@ body {
   font-size: 3.75rem;
   margin-left: 1rem;
 }
-.error__msg {
-  font-size: 2.5rem;
-  font-weight: 700;
+.error__msg,
+.empty__msg {
+  font-size: 2.25rem;
+  font-weight: 500;
+  font-style: italic;
   max-width: 50rem;
   margin: 0 auto;
 }
@@ -1570,4 +1572,83 @@ textarea:focus {
 .hidden {
   opacity: 0;
   visibility: hidden;
+}
+
+/* REVIEW CARD */
+.review-card {
+  padding: 2rem 4rem;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 65rem;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.review-card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-card__tour-name {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.review-card__rating {
+  margin-left: auto;
+}
+
+.review-card__body {
+  margin-bottom: 10px;
+}
+
+.review-card__text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.review-card__footer {
+  font-size: 1.3rem;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-card__date {
+  margin: 0;
+  color: #888;
+}
+
+.btns__review {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.btn__review {
+  font-family: inherit;
+  padding: 0.2rem 0.6rem;
+  color: inherit;
+  border: 1px solid #55c57a;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn__review:hover {
+  color: #f7f7f7;
+  background: #55c57a;
 }

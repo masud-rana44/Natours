@@ -7,15 +7,12 @@ const router = express.Router({ mergeParams: true });
 // Protect all routes after this middleware
 router.use(authController.protect);
 
-router
-  .route('/')
-  .get(reviewController.getAllReviews)
-  .post(
-    authController.restrictTo('user'),
-    reviewController.setTourUserIds,
-    reviewController.isReviewAvailable,
-    reviewController.createReview
-  );
+router.route('/').get(reviewController.getAllReviews).post(
+  authController.restrictTo('user'),
+  reviewController.setTourUserIds,
+  // reviewController.isReviewAvailable,
+  reviewController.createReview
+);
 
 router
   .route('/:id')
