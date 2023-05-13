@@ -13,7 +13,7 @@ export const sendEmail = async function (email) {
     if (res.data.status === 'success') {
       showAlert('success', 'Email send successfully!');
       window.setTimeout(() => {
-        location.assign('/emailConfirmation');
+        location.assign('/resetLinkConfirmation');
       }, 500);
     }
   } catch (err) {

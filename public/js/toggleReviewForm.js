@@ -12,7 +12,7 @@ const openReviewForm = () => {
   overlay.classList.remove('hidden');
 };
 
-const closeReviewForm = () => {
+export const closeReviewForm = () => {
   review.classList.add('hidden');
   overlay.classList.add('hidden');
 };

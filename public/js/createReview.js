@@ -1,6 +1,7 @@
 /* eslint-disable */
 import axios from 'axios';
 import { showAlert } from './alerts';
+import { closeReviewForm } from './toggleReviewForm';
 
 const reviewEl = document.querySelector('.review');
 
@@ -22,9 +23,7 @@ export const createReview = async (rating, review) => {
 
     if (res.data.status === 'success') {
       showAlert('success', 'Review submitted successfully!');
-      // window.setTimeout(() => {
-      //   location.assign('/emailConfirmation');
-      // }, 500);
+      closeReviewForm();
     }
   } catch (err) {
     console.log(err);
@@ -34,13 +33,13 @@ export const createReview = async (rating, review) => {
 
 export const deleteReview = async (reviewId, e) => {
   try {
+    const el = e.target.closest('.review-card');
+    el.style.display = 'none';
+
     const res = await axios({
       method: 'DELETE',
       url: `http://localhost:8000/api/v1/reviews/${reviewId}`,
     });
-
-    const el = e.target.closest('.review-card');
-    el.style.display = 'none';
 
     showAlert('success', 'Review deleted successfully!');
   } catch (err) {

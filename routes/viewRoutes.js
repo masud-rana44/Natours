@@ -2,6 +2,7 @@ const express = require('express');
 const viewsController = require('../controllers/viewsController');
 const authController = require('../controllers/authController');
 const bookingController = require('../controllers/bookingController');
+const userController = require('../controllers/userController');
 
 const router = express.Router();
 
@@ -29,14 +30,28 @@ router.get(
 );
 
 router.get(
-  '/emailConfirmation',
+  '/resetLinkConfirmation',
   authController.isLoggedIn,
-  viewsController.getEmailConfirmation
+  viewsController.getResetLinkConfirmation
+);
+
+router.get(
+  '/paymentConfirmation',
+  authController.protect,
+  authController.isLoggedIn,
+  viewsController.getPaymentConfirmation
 );
 
 router.get('/me', authController.protect, viewsController.getAccount);
 router.get('/my-tours', authController.protect, viewsController.getMyTours);
 router.get('/my-reviews', authController.protect, viewsController.getMyReviews);
+
+router.get(
+  '/all-bookings',
+  authController.protect,
+  authController.restrictTo('admin'),
+  viewsController.getAllBookings
+);
 
 router.patch(
   '/update-user-data',

@@ -59,14 +59,27 @@ exports.getResetPasswordForm = (req, res) => {
   });
 };
 
-exports.getEmailConfirmation = (req, res) => {
+exports.getResetLinkConfirmation = (req, res) => {
   res.status(200).render('confirmMsg', {
-    title: 'Check your email',
+    title: 'Reset link confirmation',
     heading: 'Check Your Email',
     msg: 'We sent a varification link to your email.',
     msg2: 'Check your email & click the reset password link to continue reseting your password.',
     buttonLevel: 'Wrong email address?',
     buttonText: 'Back to login',
+    url: 'login',
+  });
+};
+
+exports.getPaymentConfirmation = (req, res) => {
+  res.status(200).render('confirmMsg', {
+    title: 'Payment status',
+    heading: 'Booking complete',
+    msg: 'Your booking in complete, we will connect to you soon.',
+    msg2: "Go to your bookings & don't forgot to share your opinion with the world.",
+    buttonLevel: 'See your bookings?',
+    buttonText: 'My bookings',
+    url: 'my-tours',
   });
 };
 
@@ -85,15 +98,15 @@ exports.getMyTours = catchAsync(async (req, res, next) => {
   const bookings = await Booking.find({ user: req.user.id });
 
   // 2) Find tours with returned IDs
-  const tourIDs = bookings.map((el) => el.tour);
-  const tours = await Tour.find({ _id: { $in: tourIDs } });
+  // const tourIDs = bookings.map((el) => el.tour);
+  // const tours = await Tour.find({ _id: { $in: tourIDs } });
 
-  console.log(tours, bookings);
+  // console.log(tours, bookings);
 
   res.status(200).render('myBookings', {
     title: 'My Tours',
-    tours,
     bookings,
+    // tours,
   });
 });
 
@@ -122,5 +135,15 @@ exports.updateUserData = catchAsync(async (req, res, next) => {
   res.status(200).render('account', {
     title: 'Your account',
     user: updatedUser,
+  });
+});
+
+exports.getAllBookings = catchAsync(async (req, res, next) => {
+  // 1) Find all bookings
+  const bookings = await Booking.find();
+
+  res.status(200).render('allBookings', {
+    title: 'All Bookings',
+    bookings,
   });
 });

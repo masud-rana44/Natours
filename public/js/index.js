@@ -70,8 +70,11 @@ if (reviewForm)
     const rating = document.getElementById('rating').value;
     const review = document.getElementById('review').value;
     createReview(rating, review);
+    window.setTimeout(() => {
+      document.getElementById('review').value = '';
+      document.getElementById('rating').value = '5';
+    }, 1500);
   });
-
 if (logOutBtn) logOutBtn.addEventListener('click', logout);
 
 if (userDataForm)

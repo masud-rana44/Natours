@@ -10,11 +10,10 @@ block content
         each book in bookings
           div.card--booking
             div.card__header--booking= book.tour.name
-            - const month = book.createdAt.toLocaleString('default', { month: 'long' }).toLowerCase();
+            - const month = book.createdAt.toLocaleString('default', { month: 'long' });
             - const date = book.createdAt.getDate();
-            - const year = book.createdAt.getFullYear().toString().slice(-2);
-            - const time = book.createdAt.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-            span.date--booking= `${time[0].padStart(2, '0')}:${time[1].padStart(2, '0')}, ${date} ${month} ${year}`
+            - const year = book.createdAt.getFullYear();
+            span.date--booking= `booked on ${month} ${date}, ${year}`
             a.review-btn(href="#", data-tour-id=`${book.tour.id}`, data-user-id=`${book.user._id}`) review
             if book.paid === true
               a.paid-btn(href="#") paid
