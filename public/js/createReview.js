@@ -12,7 +12,7 @@ export const createReview = async (rating, review) => {
 
     const res = await axios({
       method: 'POST',
-      url: 'http://localhost:8000/api/v1/reviews',
+      url: '/api/v1/reviews',
       data: {
         rating,
         review,
@@ -38,7 +38,7 @@ export const deleteReview = async (reviewId, e) => {
 
     const res = await axios({
       method: 'DELETE',
-      url: `http://localhost:8000/api/v1/reviews/${reviewId}`,
+      url: `/api/v1/reviews/${reviewId}`,
     });
 
     showAlert('success', 'Review deleted successfully!');

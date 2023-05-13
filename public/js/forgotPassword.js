@@ -6,7 +6,7 @@ export const sendEmail = async function (email) {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://localhost:8000/api/v1/users/forgotPassword',
+      url: '/api/v1/users/forgotPassword',
       data: { email },
     });
 

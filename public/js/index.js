@@ -88,22 +88,22 @@ if (userDataForm)
     updateSettings('data', form);
   });
 
-// Don't work, maybe database validation issue arise
 if (userPasswordForm)
-  userPasswordForm.addEventListener('submit', (e) => {
+  userPasswordForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    document.querySelector('.btn--save-password').innerContent = 'Updateing';
+    document.querySelector('.btn--save-password').textContent = 'Updating...';
     const passwordCurrent = document.getElementById('password-current').value;
     const password = document.getElementById('password').value;
     const passwordConfirm = document.getElementById('password-confirm').value;
-    updateSettings('password', { passwordCurrent, password, passwordConfirm });
-
+    await updateSettings('password', {
+      passwordCurrent,
+      password,
+      passwordConfirm,
+    });
     document.getElementById('password-current').value = '';
     document.getElementById('password').value = '';
     document.getElementById('password-confirm').value = '';
-
-    document.querySelector('.btn--save-password').innerContent =
-      'Save password';
+    document.querySelector('.btn--save-password').textContent = 'Save password';
   });
 
 if (bookBtn)
