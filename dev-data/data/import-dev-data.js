@@ -24,7 +24,7 @@ mongoose
   });
 
 // READ JSON FILE
-const tours = JSON.parse(fs.readFileSync('./tours.json', 'utf8'));
+const tours = JSON.parse(fs.readFileSync('./new-tours.json', 'utf8'));
 const users = JSON.parse(fs.readFileSync('./users.json', 'utf8'));
 const reviews = JSON.parse(fs.readFileSync('./reviews.json', 'utf8'));
 

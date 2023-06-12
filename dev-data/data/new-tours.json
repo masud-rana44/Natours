@@ -1,0 +1,512 @@
+[
+  {
+    "_id": "5c88fa8cf4afda39709c2955",
+    "name": "The Indian Explorer",
+    "duration": 7,
+    "maxGroupSize": 15,
+    "difficulty": "medium",
+    "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a1f4e2f8fb814b56fa185"],
+    "price": 4997,
+    "summary": "Exploring the enchanting landscapes of India",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "startDates": [
+      "2023-06-19T09:00:00.000Z",
+      "2023-07-20T09:00:00.000Z",
+      "2023-08-18T09:00:00.000Z"
+    ],
+    "imageCover": "tour-1-cover.jpg",
+    "startLocation": {
+      "description": "Delhi, India",
+      "type": "Point",
+      "coordinates": [77.1025, 28.7041],
+      "address": "Connaught Place, New Delhi, Delhi 110001, India"
+    },
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2959",
+        "description": "Red Fort",
+        "type": "Point",
+        "coordinates": [77.241, 28.6562],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2958",
+        "description": "Taj Mahal",
+        "type": "Point",
+        "coordinates": [78.0421, 27.1751],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2957",
+        "description": "Jaipur City Palace",
+        "type": "Point",
+        "coordinates": [75.8284, 26.9242],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2956",
+        "description": "Amer Fort",
+        "type": "Point",
+        "coordinates": [75.8466, 26.9855],
+        "day": 5
+      }
+    ],
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "images": ["tour-1-1.jpg", "tour-1-2.jpg", "tour-1-3.jpg"]
+  },
+  {
+    "_id": "5c88fa8cf4afda39709c2951",
+    "name": "The Royal Heritage",
+    "duration": 9,
+    "maxGroupSize": 12,
+    "difficulty": "medium",
+    "guides": [
+      "5c8a21d02f8fb814b56fa189",
+      "5c8a201e2f8fb814b56fa186",
+      "5c8a1f292f8fb814b56fa184"
+    ],
+    "price": 7999,
+    "summary": "Embark on a journey through India's royal palaces and forts.",
+    "ratingsAverage": 4.6,
+    "ratingsQuantity": 8,
+    "startDates": [
+      "2023-07-05T09:00:00.000Z",
+      "2023-08-01T09:00:00.000Z",
+      "2023-09-03T09:00:00.000Z"
+    ],
+    "imageCover": "tour-2-cover.jpg",
+    "startLocation": {
+      "description": "Jaipur, India",
+      "type": "Point",
+      "coordinates": [75.8155, 26.9124],
+      "address": "Hawa Mahal Rd, Badi Choupad, J.D.A. Market, Pink City, Jaipur, Rajasthan 302002, India"
+    },
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2960",
+        "description": "Jaipur City Palace",
+        "type": "Point",
+        "coordinates": [75.8457, 26.9239],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c295f",
+        "description": "Amer Fort",
+        "type": "Point",
+        "coordinates": [75.8491, 26.9855],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c295e",
+        "description": "Jaisalmer Fort",
+        "type": "Point",
+        "coordinates": [70.9057, 26.9124],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c295d",
+        "description": "Udaipur City Palace",
+        "type": "Point",
+        "coordinates": [73.682, 24.5712],
+        "day": 6
+      }
+    ],
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nConsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "images": ["tour-2-1.jpg", "tour-2-2.jpg", "tour-2-3.jpg"]
+  },
+  {
+    "_id": "5c88fa8cf4afda39709c295a",
+    "name": "The Spiritual Journey",
+    "duration": 10,
+    "maxGroupSize": 18,
+    "difficulty": "easy",
+    "guides": [
+      "5c8a21d02f8fb814b56fa189",
+      "5c8a23412f8fb814b56fa18c",
+      "5c8a1f4e2f8fb814b56fa185"
+    ],
+    "price": 6999,
+    "summary": "Experience the spirituality and tranquility of India",
+    "ratingsAverage": 4.9,
+    "ratingsQuantity": 12,
+    "startDates": [
+      "2023-07-12T09:00:00.000Z",
+      "2023-08-10T09:00:00.000Z",
+      "2023-09-07T09:00:00.000Z"
+    ],
+    "imageCover": "tour-3-cover.jpg",
+    "startLocation": {
+      "description": "Rishikesh, India",
+      "type": "Point",
+      "coordinates": [78.2661, 30.0869],
+      "address": "Laxman Jhula, Rishikesh, Uttarakhand 249137, India"
+    },
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2961",
+        "description": "Haridwar",
+        "type": "Point",
+        "coordinates": [78.1642, 29.9457],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2962",
+        "description": "Rishikesh",
+        "type": "Point",
+        "coordinates": [78.2676, 30.0869],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2963",
+        "description": "Varanasi",
+        "type": "Point",
+        "coordinates": [83.01, 25.3176],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2964",
+        "description": "Bodh Gaya",
+        "type": "Point",
+        "coordinates": [84.986, 24.697],
+        "day": 7
+      }
+    ],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"]
+  },
+  {
+    "_id": "5c88fa8cf4afda39709c2961",
+    "name": "The Wildlife Adventure",
+    "duration": 12,
+    "maxGroupSize": 10,
+    "difficulty": "difficult",
+    "guides": [
+      "5c8a21f22f8fb814b56fa18a",
+      "5c8a23412f8fb814b56fa18c",
+      "5c8a201e2f8fb814b56fa186"
+    ],
+    "price": 12999,
+    "summary": "Embark on a thrilling wildlife adventure in India's national parks.",
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 10,
+    "startDates": [
+      "2023-07-18T09:00:00.000Z",
+      "2023-08-15T09:00:00.000Z",
+      "2023-09-12T09:00:00.000Z"
+    ],
+    "imageCover": "tour-4-cover.jpg",
+    "startLocation": {
+      "description": "Mumbai, India",
+      "type": "Point",
+      "coordinates": [72.8777, 19.076],
+      "address": "Gateway of India, Apollo Bandar, Colaba, Mumbai, Maharashtra 400001, India"
+    },
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2965",
+        "description": "Jim Corbett National Park",
+        "type": "Point",
+        "coordinates": [78.9532, 29.4957],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2966",
+        "description": "Ranthambore National Park",
+        "type": "Point",
+        "coordinates": [76.6508, 26.0173],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2967",
+        "description": "Kanha National Park",
+        "type": "Point",
+        "coordinates": [80.626, 22.4272],
+        "day": 8
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2968",
+        "description": "Bandhavgarh National Park",
+        "type": "Point",
+        "coordinates": [80.961, 23.7224],
+        "day": 11
+      }
+    ],
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "images": ["tour-4-1.jpg", "tour-4-2.jpg", "tour-4-3.jpg"]
+  },
+  {
+    "_id": "5c88fa8cf4afda39709c295d",
+    "name": "The Exotic North",
+    "duration": 14,
+    "maxGroupSize": 15,
+    "difficulty": "medium",
+    "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a201e2f8fb814b56fa186"],
+    "price": 9999,
+    "summary": "Explore the cultural diversity and stunning landscapes of northern India.",
+    "ratingsAverage": 4.9,
+    "ratingsQuantity": 14,
+    "startDates": [
+      "2023-07-25T09:00:00.000Z",
+      "2023-08-22T09:00:00.000Z",
+      "2023-09-19T09:00:00.000Z"
+    ],
+    "imageCover": "tour-5-cover.jpg",
+    "startLocation": {
+      "description": "New Delhi, India",
+      "type": "Point",
+      "coordinates": [77.1025, 28.7041],
+      "address": "Connaught Place, New Delhi, Delhi 110001, India"
+    },
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2969",
+        "description": "Amritsar",
+        "type": "Point",
+        "coordinates": [74.8723, 31.633],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296a",
+        "description": "Dharamshala",
+        "type": "Point",
+        "coordinates": [76.3437, 32.219],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296b",
+        "description": "Shimla",
+        "type": "Point",
+        "coordinates": [77.1734, 31.1048],
+        "day": 6
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296c",
+        "description": "Rishikesh",
+        "type": "Point",
+        "coordinates": [78.2676, 30.0869],
+        "day": 11
+      }
+    ],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "images": ["tour-5-1.jpg", "tour-5-2.jpg", "tour-5-3.jpg"]
+  },
+  {
+    "_id": "5c88fa8cf4afda39709c2966",
+    "name": "The Golden Triangle",
+    "duration": 10,
+    "maxGroupSize": 12,
+    "difficulty": "easy",
+    "guides": [
+      "5c8a21f22f8fb814b56fa18a",
+      "5c8a1f292f8fb814b56fa184",
+      "5c8a1f4e2f8fb814b56fa185"
+    ],
+    "price": 8999,
+    "summary": "Discover the majestic heritage of India's Golden Triangle.",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 9,
+    "startDates": [
+      "2023-08-02T09:00:00.000Z",
+      "2023-09-01T09:00:00.000Z",
+      "2023-10-03T09:00:00.000Z"
+    ],
+    "imageCover": "tour-6-cover.jpg",
+    "startLocation": {
+      "description": "Delhi, India",
+      "type": "Point",
+      "coordinates": [77.1025, 28.7041],
+      "address": "Connaught Place, New Delhi, Delhi 110001, India"
+    },
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c296d",
+        "description": "Delhi",
+        "type": "Point",
+        "coordinates": [77.209, 28.6139],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296e",
+        "description": "Agra",
+        "type": "Point",
+        "coordinates": [78.0081, 27.1767],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296f",
+        "description": "Jaipur",
+        "type": "Point",
+        "coordinates": [75.7873, 26.9124],
+        "day": 4
+      }
+    ],
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "images": ["tour-6-1.jpg", "tour-6-2.jpg", "tour-6-3.jpg"]
+  },
+  {
+    "_id": "5c88fa8cf4afda39709c2970",
+    "name": "The Colorful Rajasthan",
+    "duration": 15,
+    "maxGroupSize": 20,
+    "difficulty": "medium",
+    "guides": ["5c8a21d02f8fb814b56fa189", "5c8a1f292f8fb814b56fa184"],
+    "price": 1199,
+    "summary": "Immerse yourself in the vibrant culture of Rajasthan.",
+    "ratingsAverage": 4.9,
+    "ratingsQuantity": 16,
+    "startDates": [
+      "2023-08-09T09:00:00.000Z",
+      "2023-09-06T09:00:00.000Z",
+      "2023-10-04T09:00:00.000Z"
+    ],
+    "imageCover": "tour-7-cover.jpg",
+    "startLocation": {
+      "description": "Jaipur, India",
+      "type": "Point",
+      "coordinates": [75.7873, 26.9124],
+      "address": "City Palace, Jaipur, Rajasthan 302300, India"
+    },
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2970",
+        "description": "Jaipur",
+        "type": "Point",
+        "coordinates": [75.7873, 26.9124],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2971",
+        "description": "Jodhpur",
+        "type": "Point",
+        "coordinates": [73.0243, 26.2389],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2972",
+        "description": "Udaipur",
+        "type": "Point",
+        "coordinates": [73.7125, 24.5854],
+        "day": 6
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2973",
+        "description": "Jaisalmer",
+        "type": "Point",
+        "coordinates": [70.0093, 26.9157],
+        "day": 10
+      }
+    ],
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "images": ["tour-7-1.jpg", "tour-7-2.jpg", "tour-7-3.jpg"]
+  },
+  {
+    "_id": "5c88fa8cf4afda39709c2974",
+    "name": "The Serene South",
+    "duration": 12,
+    "maxGroupSize": 10,
+    "difficulty": "medium",
+    "guides": [
+      "5c8a21f22f8fb814b56fa18a",
+      "5c8a201e2f8fb814b56fa186",
+      "5c8a23412f8fb814b56fa18c"
+    ],
+    "price": 8999,
+    "summary": "Experience the tranquil beauty of South India.",
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 12,
+    "startDates": [
+      "2023-09-12T09:00:00.000Z",
+      "2023-10-10T09:00:00.000Z",
+      "2023-11-14T09:00:00.000Z"
+    ],
+    "imageCover": "tour-8-cover.jpg",
+    "startLocation": {
+      "description": "Chennai, India",
+      "type": "Point",
+      "coordinates": [80.2785, 13.0827],
+      "address": "Marina Beach, Chennai, Tamil Nadu 600005, India"
+    },
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2974",
+        "description": "Munnar",
+        "type": "Point",
+        "coordinates": [77.0636, 10.0889],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2975",
+        "description": "Alleppey",
+        "type": "Point",
+        "coordinates": [76.3411, 9.4981],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2976",
+        "description": "Kovalam",
+        "type": "Point",
+        "coordinates": [76.9758, 8.4025],
+        "day": 8
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2977",
+        "description": "Kanyakumari",
+        "type": "Point",
+        "coordinates": [77.536, 8.0883],
+        "day": 11
+      }
+    ],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "images": ["tour-8-1.jpg", "tour-8-2.jpg", "tour-8-3.jpg"]
+  },
+  {
+    "_id": "5c88fa8cf4afda39709c296c",
+    "name": "The Wild Safari",
+    "duration": 9,
+    "maxGroupSize": 12,
+    "difficulty": "medium",
+    "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a23412f8fb814b56fa18c"],
+    "price": 1399,
+    "summary": "Embark on an exciting wildlife safari adventure.",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 10,
+    "startDates": [
+      "2023-08-16T09:00:00.000Z",
+      "2023-09-13T09:00:00.000Z",
+      "2023-10-18T09:00:00.000Z"
+    ],
+    "imageCover": "tour-9-cover.jpg",
+    "startLocation": {
+      "description": "Mumbai, India",
+      "type": "Point",
+      "coordinates": [72.8777, 19.076],
+      "address": "Gateway of India, Mumbai, Maharashtra 400001, India"
+    },
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2978",
+        "description": "Kanha National Park",
+        "type": "Point",
+        "coordinates": [80.6265, 22.3619],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2979",
+        "description": "Bandhavgarh National Park",
+        "type": "Point",
+        "coordinates": [80.9616, 23.7],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c297a",
+        "description": "Ranthambore National Park",
+        "type": "Point",
+        "coordinates": [76.5552, 26.0173],
+        "day": 6
+      }
+    ],
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "images": ["tour-9-1.jpg", "tour-9-2.jpg", "tour-9-3.jpg"]
+  }
+]

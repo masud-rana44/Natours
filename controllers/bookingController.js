@@ -10,7 +10,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 
   // 2) Create checkout session
   const session = await stripe.checkout.sessions.create({
-    payment_method_types: ['card', 'alipay'],
+    payment_method_types: ['card'],
     success_url: `${req.protocol}://${req.get('host')}/?tour=${
       req.params.tourId
     }&user=${req.user.id}&price=${tour.price}`,
@@ -21,7 +21,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     line_items: [
       {
         price_data: {
-          currency: 'usd',
+          currency: 'INR',
           unit_amount: tour.price * 100,
           product_data: {
             name: `${tour.name} Tour`,
